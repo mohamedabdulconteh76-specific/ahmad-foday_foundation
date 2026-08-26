@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Foday Islamic Foundation</title>
+    <style>
+        :root {
+            --primary-green: #1b4d3e;
+            --accent-gold: #c5a059;
+            --light-bg: #f4f7f5;
+            --dark-text: #2c3e50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-green);
+            color: white; padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        header p { margin: 8px 0 0 0; color: var(--accent-gold); font-weight: 500; font-size: 1.1rem; }
+        nav { background-color: #12342a; padding: 12px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.95rem; }
+        .hero {
+            background: linear-gradient(rgba(27, 77, 62, 0.88), rgba(27, 77, 62, 0.88)), url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center; color: white; text-align: center; padding: 3.5rem 1rem;
+        }
+        .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 20px auto; }
+        .btn { display: inline-block; background-color: var(--accent-gold); color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
+        .section-title { text-align: center; color: var(--primary-green); margin-bottom: 1.5rem; }
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-green); text-align: center; }
+        .card h3 { color: var(--primary-green); margin-top: 0; }
+        .flex-container { display: flex; flex-wrap: wrap; gap: 25px; }
+        .flex-child { flex: 1; min-width: 290px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button[type="submit"] { width: 100%; background-color: var(--primary-green); color: white; border: none; padding: 12px; margin-top: 15px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .info-list p { margin: 12px 0; line-height: 1.5; }
+        .info-list strong { color: var(--primary-green); }
+        footer { background-color: var(--primary-green); color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; border-top: 4px solid var(--accent-gold); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ahmad Foday Islamic Foundation</h1>
+        <p>Nurturing Knowledge, Faith, and Character</p>
+    </header>
+
+    <nav>
+        <a href="#programs">Programs</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to Our Madrassa</h2>
+        <p>Providing authentic Islamic education in Tajweed, Adhkar, and Hadith studies in Waterloo, Sierra Leone.</p>
+        <a href="#admission" class="btn">Enroll Today</a>
+    </div>
+
+    <div class="container" id="programs">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="programs-grid">
+            <div class="card">
+                <h3>Tajweed</h3>
+                <p>Master proper Quranic pronunciation and recitation rules under qualified guidance.</p>
+            </div>
+            <div class="card">
+                <h3>Adhkar</h3>
+                <p>Learn authentic daily supplications and remembrances for everyday practice.</p>
+            </div>
+            <div class="card">
+                <h3>Hadith Studies</h3>
+                <p>Study the traditions, actions, and sayings of the Prophet Muhammad (PBUH).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="admission">
+        <div class="flex-container">
+            <div class="flex-child">
+                <h2 class="section-title" style="text-align: left;">Online Admission</h2>
+                <form action="mailto:mohamedabdulconteh47@gmail.com" method="post" enctype="text/plain">
+                    <label for="student_name">Student Full Name</label>
+                    <input type="text" id="student_name" name="Student_Name" required>
+
+                    <label for="parent_phone">Phone Number</label>
+                    <input type="tel" id="parent_phone" name="Phone_Number" required>
+
+                    <label for="program">Select Program</label>
+                    <select id="program" name="Program">
+                        <option value="Tajweed">Tajweed</option>
+                        <option value="Adhkar">Adhkar</option>
+                        <option value="Hadith Studies">Hadith Studies</option>
+                        <option value="All Programs">All Programs</option>
+                    </select>
+
+                    <label for="notes">Additional Information</label>
+                    <textarea id="notes" name="Notes" rows="3"></textarea>
+
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
+
+            <div class="flex-child info-list" id="contact">
+                <h2 class="section-title" style="text-align: left;">School Information</h2>
+                <p><strong>Location:</strong><br> Canserra Community, Kissi Town, Waterloo, Sierra Leone</p>
+                <p><strong>Class Schedule:</strong><br> Saturday to Thursday (4:00 PM – 7:00 PM)</p>
+                <p><strong>Phone Numbers:</strong><br> 075071599 / 077466815</p>
+                <p><strong>Email:</strong><br> mohamedabdulconteh47@gmail.com</p>
+                <p><strong>Uniform Color:</strong><br> School Green</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Ahmad Foday Islamic Foundation. Waterloo, Sierra Leone.</p>
+    </footer>
+
+</body>
+</html>
